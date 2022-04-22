@@ -1,0 +1,85 @@
+/** Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ? Defining variables */
+:root{
+  --background_color: #23252C;
+  --card_body_color: #1A1B21;
+  --primary_text_color: #FFFFFF;
+  --secondary_text_color: #DCDCDC;
+  --accent_color: #F3BF99;
+  --btn_blue_color: #5093E2;
+  --icon_bg_color: #161619;
+  --icon_color: #918E9B;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.wrapper{
+  background-color: var(--background_color);
+  color: var(--primary_text_color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card{
+  background-color: var(--card_body_color);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 80vh;
+  /* justify-content: center; */
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.card-img{
+  background-image: url('../images/img102.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+}
+
+.name{
+  font-size:25px;
+  font-weight: bold;
+}
+
+.title{
+  font-size:13px;
+  font-weight: 500;
+  color: var(--accent_color);
+}
+
+.username{
+  font-size: 11px;
+}
+
+.card-footer{
+  width: 100%;
+  height: 10%;
+  background-color: var(--icon_bg_color);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
