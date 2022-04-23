@@ -3,4 +3,5 @@
 - Learning from Scrimba 
 
 ## Projects TODO:
-1. [ ] Digital Card 
+1. [X] Digital Card 
+2. [ ] AirBNB Experience Clone
