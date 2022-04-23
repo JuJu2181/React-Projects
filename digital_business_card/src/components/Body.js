@@ -22,7 +22,7 @@ export default function Body() {
                     </a>
             </div>
             <div className="about">
-                <h2 className="content-title"> About</h2>
+                <h2 className="content-title"> About Me</h2>
                 <p className="content-desc">I am an enthusiastic learner highly interested in full stack web development and Artificial intelligence. I am comfortable to work in teams and like working on projects.</p>
             </div>
             <div className="skill">
