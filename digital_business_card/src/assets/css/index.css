@@ -228,3 +228,70 @@
     font-size: 25px;
   }
 }
+
+@media only screen and (max-height: 800px) {
+  .card{
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .name{
+    font-size:16px;
+  }
+  
+  .title{
+    font-size:12px;
+  }
+  
+  .username{
+    font-size: 9px;
+  }
+
+  .btn{
+    padding: 0.4rem 0.4rem;
+    margin-right: 8px;
+    border-radius: 0.6rem;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .content-title{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  
+  .content-desc{
+    font-size: 11px;
+    font-weight: 200;
+    color: var(--secondary_text_color);
+  }
+
+  .footer-icon{
+    font-size: 25px;
+  }
+
+  .about{
+    margin-top: 14px;
+  }
+
+  .skill{
+    margin-top: 12px;
+  }
+
+  .email-icon{
+    display: none;
+  }
+
+  .resume-icon{
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 500px){
+  
+  .skill{
+    display:  none;
+  }
+}

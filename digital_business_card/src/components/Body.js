@@ -13,11 +13,11 @@ export default function Body() {
             <div className="btn-container">
 
                     <a href="mailto:anishshilpakar8@gmail.com" className="btn email-btn">
-                    <FontAwesomeIcon icon={ faEnvelope}/>
+                    <FontAwesomeIcon icon={ faEnvelope}className="email-icon"/>
                     Email
                     </a>
                 <a href={ resume } download="anish_shilpakar_resume" className="btn linked-btn">
-                    <FontAwesomeIcon icon={faFileText}/>
+                    <FontAwesomeIcon icon={faFileText} className="resume-icon"/>
                         Resume
                     </a>
             </div>
