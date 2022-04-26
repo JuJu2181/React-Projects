@@ -6,4 +6,5 @@
 1. [X] React Info Site
 2. [X] Digital Card 
 3. [X] AirBNB Experience Clone
-4. [ ] Travel Journal
+4. [X] Travel Journal
+5. [ ] Meme Generator
