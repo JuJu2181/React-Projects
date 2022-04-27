@@ -1,5 +1,11 @@
+import Header from "./components/Header";
+import Meme from "./components/Meme";
+
 export default function App() { 
   return (
-    <h2>Hello There! Meme Generator</h2>
+    <div>
+      <Header />
+      <Meme />
+    </div>
   );
 }
