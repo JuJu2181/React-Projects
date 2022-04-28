@@ -63,3 +63,9 @@ main{
 .image-icon{
   margin-left: 5px;
 }
+
+.meme-img{
+  width: 100%;
+  margin-top: 1rem;
+  height: 640px;
+}

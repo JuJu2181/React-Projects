@@ -1,14 +1,17 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage} from "@fortawesome/free-solid-svg-icons";
 import memeData from "../memesData";
 
 export default function Meme() { 
 
+    const [memeUrl, setUrl] = React.useState("");
+
     const getMemeImage = () => { 
         const memesArray = memeData.data.memes;
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url 
-        console.log(url)
+        setUrl(url);
     }
 
     return (
@@ -22,6 +25,7 @@ export default function Meme() {
                     <FontAwesomeIcon icon={ faImage} className="image-icon"/>
                 </button>
             </div>
+            <img src={ memeUrl!==""?memeUrl:memeData.data.memes[0].url} alt="meme image" className="meme-img" />
         </main>
     );
 }
