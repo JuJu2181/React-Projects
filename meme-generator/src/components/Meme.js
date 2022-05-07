@@ -9,18 +9,43 @@ export default function Meme() {
         {
             topText: "",
             bottomText: "",
-            randomImage: memeData.data.memes[0].url
+            randomImage: "http://i.imgflip.com/1bij.jpg"
         }
     );
 
-    const [allMemeImages, setAllMemeImages] = React.useState(memeData);
+    const [allMemeImages, setAllMemeImages] = React.useState([]);
+    
+    /** Alternatively using async await instead of fetch
+    useEffect takes a function as its parameter. If that function
+    returns something, it needs to be a cleanup function. Otherwise,
+    it should return nothing. If we make it an async function, it
+    automatically retuns a promise instead of a function or nothing.
+    Therefore, if you want to use async operations inside of useEffect,
+    you need to define the function separately inside of the callback
+    function, as seen below:
+    */
 
     // const [memeUrl, setUrl] = React.useState(memeData.data.memes[0].url);
+    // * Using fetch api ad then
+    React.useEffect(() => { 
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemeImages(data.data.memes))
+    },[]);
+    
+    //* using async await 
+    // React.useEffect(() => { 
+    //     async function get_memes() { 
+    //         const res = await fetch("https://api.imgflip.com/get_memes")
+    //         const data = await res.json();
+    //         setAllMemeImages(data.data.memes)
+    //     }
+    //     get_memes();
+    //     },[]);
 
     const getMemeImage = () => { 
-        const memesArray = allMemeImages.data.memes;
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const url = memesArray[randomNumber].url 
+        const randomNumber = Math.floor(Math.random() * allMemeImages.length)
+        const url = allMemeImages[randomNumber].url 
         // setUrl(url);
         setMeme(
             prevMeme => ({
