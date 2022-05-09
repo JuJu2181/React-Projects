@@ -65,6 +65,14 @@ export default function App() {
             return note.id === currentNoteId
         }) || notes[0]
     }
+
+    function deleteNote(event, noteId) { 
+        // ? This will prevent propagating click event to parent element when child element is clicked
+        event.stopPropagation()
+        // deleting notes by using filter method
+        // only keep the notes whose delete was not clicked while removing all other notes from the list
+        setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId));
+    }
     
     return (
         <main>
@@ -77,10 +85,11 @@ export default function App() {
                 className="split"
             >
                 <Sidebar
-                    notes={notes}
-                    currentNote={findCurrentNote()}
-                    setCurrentNoteId={setCurrentNoteId}
-                    newNote={createNewNote}
+                            notes={notes}
+                            currentNote={findCurrentNote()}
+                            setCurrentNoteId={setCurrentNoteId}
+                            newNote={createNewNote}
+                            deleteNote={ deleteNote}    
                 />
                 {
                     currentNoteId && 
