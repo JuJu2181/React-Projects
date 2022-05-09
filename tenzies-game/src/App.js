@@ -1,24 +1,33 @@
 import React from "react";
 import Dice from "./components/Dice";
+import { nanoid} from "nanoid";
 
 
 export default function App() { 
     
     // To generate list of 10 random numbers from 0 to 6
     // algorithmic solution 
-    function allNewDiceA() {
-        const newDice = []
-        for (let i = 0; i < 10; i++) { 
-            newDice.push(Math.ceil(Math.random()*6));
-        }
-        return newDice;
-    }
+    // function allNewDiceA() {
+    //     const newDice = []
+    //     for (let i = 0; i < 10; i++) { 
+    //         newDice.push(Math.ceil(Math.random()*6));
+    //     }
+    //     return newDice;
+    // }
     
-    const allNewDice = () => Array(10).fill().map(() => Math.ceil(Math.random() * 6));
+    // only suitable for array not for dictionary
+    const allNewDice = () => Array(10).fill().map(() => ({
+        id: nanoid(),
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false
+    })
+    );
+
+    console.log(allNewDice())
     
     const [dice, setDice] = React.useState(allNewDice());
 
-    const diceElements = dice.map(dice => <Dice value={ dice}/>)
+    const diceElements = dice.map(dice => <Dice key={dice.id} value={dice.value} isHeld={ dice.isHeld}/>)
 
     const handleRoll = () => { 
         setDice(allNewDice());
