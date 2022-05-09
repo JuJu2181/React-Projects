@@ -14,3 +14,12 @@ Value must be a string so JSON.stringify(value) should be used in case of comple
 3) Update note and put the last modified note in top of sidebar 
 
 4) Delete Notes 
+
+## Some Insights 
+Lazy state initialization is used so that the initialization occurs only once when an expensive code is happening inside state initialization  
+Syntax:
+```
+    const [state, setState] = React.useState(
+        () => console.log("State initialization")
+    )
+```

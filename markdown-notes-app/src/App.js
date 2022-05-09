@@ -9,7 +9,7 @@ import {nanoid} from "nanoid"
 export default function App() {
     const [notes, setNotes] = React.useState(
         // here we will get the last saved notes from localstorage and only if no notes exist in localstorage we will set notes to empty array 
-        JSON.parse(localStorage.getItem("notes")) ||
+        () => JSON.parse(localStorage.getItem("notes")) ||
         [])
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0] && notes[0].id) || ""
