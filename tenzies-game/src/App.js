@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function App() { 
-    return "Starting Tenzies Game";
+    return <div className="main-wrapper">
+        <main>
+            
+        </main>
+    </div>
 }
