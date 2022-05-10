@@ -16,12 +16,15 @@ export default function App() {
     // }
     
     // only suitable for array not for dictionary
-    const allNewDice = () => Array(10).fill().map(() => ({
+    
+    // helper function to generate single dice randomly
+    const generateNewDice = () => ({
         id: nanoid(),
         value: Math.ceil(Math.random() * 6),
         isHeld: false
     })
-    );
+    
+    const allNewDice = () => Array(10).fill().map(generateNewDice);
 
     const [dice, setDice] = React.useState(allNewDice());
     
@@ -37,7 +40,11 @@ export default function App() {
     const diceElements = dice.map(dice => <Dice key={dice.id} value={dice.value} isHeld={dice.isHeld} holdDice={ ()=>holdDice(dice.id) }/>)
 
     const handleRoll = () => { 
-        setDice(allNewDice());
+        setDice(oldDice => oldDice.map(
+            dice => { 
+                return dice.isHeld ? dice : generateNewDice()
+            }
+        ));
     }
 
     return <div className="main-wrapper">
