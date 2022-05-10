@@ -23,11 +23,18 @@ export default function App() {
     })
     );
 
-    console.log(allNewDice())
-    
     const [dice, setDice] = React.useState(allNewDice());
+    
+    const holdDice = (id) => { 
+        setDice(oldDice => oldDice.map(
+            dice => { 
+                return dice.id === id ? { ...dice, isHeld: !dice.isHeld }
+                    : dice
+            }
+        ));
+    }
 
-    const diceElements = dice.map(dice => <Dice key={dice.id} value={dice.value} isHeld={ dice.isHeld}/>)
+    const diceElements = dice.map(dice => <Dice key={dice.id} value={dice.value} isHeld={dice.isHeld} holdDice={ ()=>holdDice(dice.id) }/>)
 
     const handleRoll = () => { 
         setDice(allNewDice());

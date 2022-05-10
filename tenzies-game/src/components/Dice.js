@@ -6,7 +6,7 @@ export default function Dice(props) {
     //     backgroundColor: props.isHeld ? "#59E391": "#ffffff"
     // }
 
-    return <div className={ props.isHeld ? "dice-green": "dice"}>
+    return <div className={props.isHeld ? "dice-green" : "dice"} onClick={props.holdDice}>
         { props.value}
     </div>
 }
