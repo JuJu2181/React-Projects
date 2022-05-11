@@ -1,6 +1,6 @@
 # React-Projects
 - Projects I will be doing as I learn react
-- Learning from Scrimba 
+- Learning from Scrimba and YouTube
 
 ## Projects TODO:
 1. [X] React Info Site
@@ -11,3 +11,4 @@
 6. [X] Markdown Notes App
 7. [X] Tenzies Game
 8. [ ] Quiz App
+9. [ ] Recipe App
