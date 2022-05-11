@@ -21,6 +21,7 @@
 
 .main-wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -121,6 +122,35 @@ main{
 .roll-btn:active{
     box-shadow: inset 10px 10px 15px -3px rgba(0, 0, 0, 0.7);
 }
+
+/* For Scores and time  */
+.scores{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 600px;
+    margin: 2rem 0;
+}
+
+.best{
+    background-color: var(--selected-color);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.current{
+    background-color: var(--text-color);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+
+/** Media queries for responsiveness */
 
 @media screen and (max-width: 650px) {
     main{

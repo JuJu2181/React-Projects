@@ -17,8 +17,18 @@ export default function App() {
     
     // only suitable for array not for dictionary
     
+    //* to check if the item called best_rolls exists previously in localstorage or not 
+    if (!localStorage.getItem("best_rolls")) { 
+        localStorage.setItem("best_rolls",0);
+    }
+    
     // * For Endgame we create a new state called tenzies and use useEffect hook 
     const [tenzies, setTenzies] = React.useState(false);
+
+    //  to record number of rolls needed to finish game 
+    const [rollsCount, setRollsCount] = React.useState(0);
+
+    const [bestRolls, setBestRolls] = React.useState(0);
     
     
     
@@ -47,6 +57,9 @@ export default function App() {
     const handleRoll = (tenzies) => { 
 
         if (tenzies) { 
+            if (bestRolls > localStorage.getItem("best_rolls")) { 
+                localStorage.setItem("best_rolls",bestRolls);
+            }
             setTenzies(false);
             setDice(allNewDice());
         } else {
@@ -69,7 +82,11 @@ export default function App() {
     }, [dice]);
         
     return <div className="main-wrapper">
-        { tenzies && <Confetti/>}
+        {tenzies && <Confetti />}
+        <section className="scores">
+            <div className="best">Best Roll: 99</div>
+            <div className="best">Best Time: 99</div>
+        </section>
         <main>
             <h1 className="game-title">Tenzies</h1>
             <p className="game-desc">Roll until all dice are same. Click each die to freeze it at its current value between rolls.</p>
@@ -78,5 +95,9 @@ export default function App() {
             </div>
             <button className="roll-btn" onClick={()=>handleRoll(tenzies)}>{ tenzies ? "New Game":"Roll"}</button>
         </main>
+        <section className="scores">
+            <div className="current">Roll: 0</div>
+            <div className="current">Time: 0</div>
+        </section>
     </div>
 }
