@@ -98,7 +98,8 @@ export default function App() {
             <div className="dice-wrapper">
                 { diceElements}
             </div>
-            <button className="roll-btn" onClick={()=>handleRoll(tenzies)}>{ tenzies ? "New Game":"Roll"}</button>
+            <button className="roll-btn" onClick={() => handleRoll(tenzies)}>{tenzies ? "New Game" : "Roll"}</button>
+            {tenzies && <div className="won-title"> Yay, You Won 🥳</div>}
         </main>
     </div>
 }

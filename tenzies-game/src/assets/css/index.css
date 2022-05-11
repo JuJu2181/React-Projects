@@ -153,6 +153,19 @@ main{
     box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.6);
 }
 
+.won-title{
+    background-color: inherit;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+/* to display dice face instead of number */
+.dice-icon{
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
 
 /** Media queries for responsiveness */
 
