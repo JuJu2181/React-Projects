@@ -9,5 +9,5 @@ TBA
 - [ ] Track the number of rolls needed to win game 
 - [ ] Track the time taken to win game 
 - [ ] Save best time in localStorage 
-- [ ] Make Responsive 
+- [ X ] Make Responsive 
 - [ ] Deploy in Netlify
