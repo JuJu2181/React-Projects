@@ -7,4 +7,7 @@
 2. [X] Digital Card 
 3. [X] AirBNB Experience Clone
 4. [X] Travel Journal
-5. [ ] Meme Generator
+5. [X] Meme Generator
+6. [X] Markdown Notes App
+7. [X] Tenzies Game
+8. [ ] Quiz App
