@@ -130,14 +130,17 @@ main{
     justify-content: space-evenly;
     width: 600px;
     margin: 2rem 0;
+    z-index: 10;
 }
 
 .best{
-    background-color: var(--selected-color);
+    background-color: #454545;
     padding: 10px;
     border-radius: 20px;
     font-size: 1.2rem;
     font-weight: 700;
+    color: var(--white-color);
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.6);
 }
 
 .current{
@@ -147,6 +150,7 @@ main{
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--white-color);
+    box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.6);
 }
 
 

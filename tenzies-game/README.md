@@ -6,9 +6,7 @@ TBA
 
 ## Features to add apart from course:
 - [ ] Put real dots on dice instead of number 
-- [ ] Track the number of rolls needed to win game 
-- [ ] Save best number of rolls needed to win game 
-- [ ] Track the time taken to win game 
-- [ ] Save best time in localStorage 
+- [X] Track the number of rolls needed to win game 
+- [X] Save best number of rolls needed to win game 
 - [X] Make Responsive 
 - [ ] Deploy in Netlify
