@@ -21,11 +21,11 @@
 
 .main-wrapper{
     display: flex;
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 main{
@@ -195,6 +195,24 @@ main{
         height: 60px;
         font-size: 25px;
     }
+
+    .best{
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .current{
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .won-title{
+        background-color: inherit;
+        margin-top: 4px;
+        font-weight: 700;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -230,6 +248,28 @@ main{
         width: 140px;
         height: 45px;
         font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    .scores{
+        width: 400px;
+    }
+
+    .best{
+        padding: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    .current{
+        padding: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    .won-title{
+        background-color: inherit;
+        margin-top: 3px;
         font-weight: 700;
     }
 }
@@ -268,5 +308,26 @@ main{
         height: 30px;
         font-size: 1.2rem;
         font-weight: 700;
+    }
+
+    .scores{
+        width: 300px;
+    }
+
+    .best{
+        padding: 8px;
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    
+    .current{
+        padding: 8px;
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    
+    .won-title{
+        background-color: inherit;
+        margin-top: 3px;
     }
 }
