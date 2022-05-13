@@ -35,7 +35,12 @@ function Recipe() {
     ));
     
 
-    return <DetailWrapper>
+    return <DetailWrapper
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={ {duration: 1}}
+    >
         <div>
             <h2>{ details.title}</h2>
             <img src={details.image} alt={ details.title} />
@@ -48,7 +53,7 @@ function Recipe() {
                 {/* Here api data itself has html tags so we need to render it like this else it will also render the tags */}
                 <h3>Description</h3>    
                 <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-                <h3>Steps to cook</h3>
+                {details.instructions && <h3>Steps to cook</h3>}
                 <p className="instructions" dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
             </div>
             )}

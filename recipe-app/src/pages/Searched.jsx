@@ -39,7 +39,12 @@ function Searched() {
 
     return <>
     <h3>Search Results for {params.search}</h3>
-    <Grid>
+        <Grid
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={ {duration: 1.2}}
+        >
         { searchResult}
     </Grid>;
     </>

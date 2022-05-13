@@ -2,6 +2,8 @@
 //components for styles
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion} from "framer-motion";
+
 
 // * Using Styled component for styling instead of adding classes
 const Wrapper = styled.div`
@@ -52,7 +54,7 @@ const Gradient = styled.div`
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));
 `;
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 3rem;
@@ -99,7 +101,7 @@ const StyledForm = styled.form`
     }
 `;
 
-const DetailWrapper = styled.div`
+const DetailWrapper = styled(motion.div)`
     margin-top: 10rem;
     margin-bottom: 5rem; 
     display: flex;

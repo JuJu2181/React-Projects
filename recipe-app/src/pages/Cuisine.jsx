@@ -1,6 +1,4 @@
 import React from "react";
-// for animation
-import { motion } from "framer-motion";
 // useParams allows to pull parameters from the link url
 import { Link, useParams } from "react-router-dom";
 import {Grid,GridCard} from "../components/Style";
@@ -40,7 +38,12 @@ function Cuisine() {
         );
     });
 
-    return <Grid>
+    return <Grid
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={ {duration: 0.8}}
+    >
         {cuisines}
     </Grid>;
 }
