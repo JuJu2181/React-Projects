@@ -8,6 +8,7 @@ import { StyledForm} from "./Style";
 function Search() {
 
     const [input, setInput] = React.useState("");
+    
     const navigate = useNavigate();
 
     const handleInput = (e) => { 
@@ -17,14 +18,16 @@ function Search() {
     // to handle submitting the form
     const handleSubmit = (e) => { 
         e.preventDefault();
-        navigate(`/searched/${input}`);
+        let prevInput = input;
+        setInput("");
+        navigate(`/searched/${prevInput}`);
     }
 
     return (
         <StyledForm onSubmit={handleSubmit}>
             <div>
                 <FaSearch/>
-                <input type="text" name="" value={input} onChange={handleInput}/>
+                <input type="text" name="" value={input} onChange={handleInput} />
             </div>
         </StyledForm>
     );

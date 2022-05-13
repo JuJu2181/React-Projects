@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import { Grid, GridCard} from "../components/Style";
 
 
@@ -29,15 +29,20 @@ function Searched() {
     const searchResult = searchedRecipes.map(item => { 
         return (
             <GridCard key={item.id}>
-                <img src={item.image} alt={item.title} />
-                <h4>{ item.title}</h4>
+                <Link to={ `/recipe/${item.id}`}>
+                    <img src={item.image} alt={item.title} />
+                    <h4>{item.title}</h4>
+                </Link>
             </GridCard>
         );
     });
 
-    return <Grid>
+    return <>
+    <h3>Search Results for {params.search}</h3>
+    <Grid>
         { searchResult}
     </Grid>;
+    </>
 }
 
 export default Searched;
