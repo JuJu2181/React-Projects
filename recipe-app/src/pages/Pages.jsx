@@ -1,12 +1,18 @@
 import React from "react";
+// importing pages
 import Home from "./Home";
+import Cuisine from "./Cuisine";
+// importing from react router dom
+import {Route, Routes} from 'react-router-dom';
 
 // Pages will contain all the pages(includes navbar, home, search etc)
 function Pages() {
     return (
-        <div>
-            <Home />
-        </div>
+        <Routes>
+            {/* Here / means home and if this path matches it will render the home element */}
+            <Route path="/" element={<Home />} />
+            <Route path="/cuisine/:type" element={<Cuisine />}/>
+        </Routes>
     );
 }
 

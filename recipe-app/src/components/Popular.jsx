@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState} from "react";
-//components for styles
-import styled from "styled-components";
 // splide is for the carousel
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 // css for splide
 import "@splidejs/splide/dist/css/splide.min.css"; 
 import storedData from "../data";
+import { Wrapper, Card, Gradient } from "./Style";
 
 function Popular() {
 
@@ -32,7 +31,7 @@ function Popular() {
 
             // console.log(checkPopular);
 
-            if (checkPopular !== 'undefined') {
+            if (checkPopular !== 'undefined' && checkPopular !== null) {
                 // If there is already an item called popular stored in localStorage then we will get the recipes from local Storage instead of sending fetch request
                 setPopular(JSON.parse(checkPopular));
             } else {
@@ -94,54 +93,6 @@ function Popular() {
         </div>;
 }
 
-// * Using Styled component for styling instead of adding classes
-const Wrapper = styled.div`
-    margin: 4rem 0rem;
-`;
-
-// card for each recipe
-const Card = styled.div`
-    min-height: 25rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    position: relative;
-
-    ${'' /* similar to sass nesting works in styled components */}
-    img{
-        border-radius: 2rem;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    p{
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        bottom: 0%;
-        transform: translate(-50%, 0%);
-        color: white;
-        width: 100%;
-        text-align: center;
-        font-weight: 600;
-        font-size: 1rem;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-`;
-
-// gradient style component 
-const Gradient = styled.div`
-    z-index: 3;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5));
-`;
 
 
 export default Popular;
