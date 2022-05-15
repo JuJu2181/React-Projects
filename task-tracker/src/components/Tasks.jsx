@@ -1,14 +1,11 @@
 import React from "react";
-import tasks from "../tasksdata";
+import Task from "./Task";
 
-console.log(tasks);
-
-function Tasks() {
+// using destructuring instead of using props in this case
+function Tasks({ tasks }) {
     return (
         <>
-            {tasks.map((task) => {
-                return <h3>{task.text}</h3>;
-            })}
+            {tasks.map((task) => <Task key={task.id} task={ task}/>)}
         </>
     );
 }
