@@ -1,3 +1,9 @@
+import Header from './components/Header';
+
 export default function App() { 
-  return "Setup for Task Tracker";
+  return (
+    <div className="container">
+      <Header/>
+    </div>
+  );
 }
