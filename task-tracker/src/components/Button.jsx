@@ -7,11 +7,7 @@ function Button(props) {
         backgroundColor: props.color
     };
 
-    const handleClick = () => { 
-        console.log('clicked');
-    }
-
-    return <button className="btn" style={btnStyles} onClick={ handleClick}>
+    return <button className="btn" style={btnStyles} onClick={props.onClick}>
         {props.text}
     </button>;
 }

@@ -12,7 +12,7 @@ function Task({ task, onDelete, onToggle}) {
     return (
         <div className={`task ${task.reminder?'reminder':''}`} onDoubleClick={()=>onToggle(task.id)}>
             <h3>{task.text} <FaTimes style={iconStyles} onClick={ ()=>onDelete(task.id)}/></h3>
-            <p>{ task.day }</p>
+            <p>{ task.date }</p>
         </div>
     );
 }
