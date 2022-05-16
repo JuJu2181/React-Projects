@@ -15,8 +15,14 @@
     {
       "text": "School Day",
       "date": "Tuesday 10",
-      "reminder": false,
+      "reminder": true,
       "id": 3
+    },
+    {
+      "text": "AI class",
+      "date": "Today 5",
+      "reminder": true,
+      "id": 4
     }
   ]
 }
