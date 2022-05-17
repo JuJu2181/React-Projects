@@ -11,5 +11,5 @@
 6. [X] Markdown Notes App
 7. [X] Tenzies Game
 8. [ ] Quiz App
-9. [ ] Recipe App
-10.[ ] Task Tracker
+9. [X] Recipe App
+10.[X] Task Tracker
