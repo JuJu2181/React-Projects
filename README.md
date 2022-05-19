@@ -12,4 +12,6 @@
 7. [X] Tenzies Game
 8. [ ] Quiz App
 9. [X] Recipe App
-10.[X] Task Tracker
+10.[X] Task Tracker  
+11.[ ] MERN Blog
+12.[ ] MERN ChatApp
