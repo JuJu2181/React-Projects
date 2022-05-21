@@ -19,7 +19,7 @@ function Question({ question, correct_answer, incorrect_answers }) {
   const holdSelectedAnswer = (id) => {
     setAnswers(oldAnswers => oldAnswers.map(
       oldAnswer => { 
-        return oldAnswer.id === id ? {...oldAnswer, isSelected: !oldAnswer.isSelected}:oldAnswer
+        return oldAnswer.id === id ? { ...oldAnswer, isSelected: !oldAnswer.isSelected } : {...oldAnswer,isSelected: false}
       }
     ));
   }
