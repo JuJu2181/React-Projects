@@ -10,8 +10,8 @@ function Question({ question, correct_answer, incorrect_answers }) {
   ));
 
   return (
-        <div className="question">
-      <h2 className="question-title">{question}</h2>
+    <div className="question">
+      <h2 className="question-title" dangerouslySetInnerHTML={{ __html: question} }></h2>
       <div className="answers-list">
         {options}
         </div>
