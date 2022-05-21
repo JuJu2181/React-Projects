@@ -133,3 +133,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.logo{
+  padding: 2rem;
+  font-family: cursive;
+  font-size: 2rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.logo:hover{
+  color: var(--btn-color);
+}
