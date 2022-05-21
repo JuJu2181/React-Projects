@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Link} from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import Home from './Home';
 import Questions from './Questions';
 import TopBlob from "../components/TopBlob";
@@ -10,9 +10,7 @@ function Pages() {
   return (
     <div className="main">
       <TopBlob />
-      <Link to='/' className='btn-link'>
-        <Navbar />
-      </Link> 
+      <Navbar />
       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/questions' element={<Questions/>}/>
