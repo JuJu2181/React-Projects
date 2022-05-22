@@ -5,6 +5,7 @@ import Questions from './Questions';
 import TopBlob from "../components/TopBlob";
 import BottomBlob from "../components/BottomBlob";
 import Navbar from '../components/Navbar';
+import Results from './Results';
 
 function Pages() {
   return (
@@ -13,7 +14,8 @@ function Pages() {
       <Navbar />
       <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/questions' element={<Questions/>}/>
+        <Route path='/questions' element={<Questions />} />
+        <Route path='/results' element={<Results/>}/>
     </Routes>
     <BottomBlob />
     </div>

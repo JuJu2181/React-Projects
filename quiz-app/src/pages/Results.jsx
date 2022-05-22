@@ -3,7 +3,7 @@ import Question from "../components/Question";
 import Button from "../components/Button";
 import { nanoid} from "nanoid";
 
-function Questions() {
+function Results() {
     // state for all questions
     const [questions, setQuestions] = React.useState([]);
 
@@ -24,24 +24,6 @@ function Questions() {
 
     // fetching the data from api
     const fetchQuestions = async (questionsCount = 5) => {
-        // using local storage
-        // to check if questions have been already fetched in local storage or not
-        // const checkQuestion = localStorage.getItem("questions");
-        // if (checkQuestion !== "undefined" && checkQuestion !== null) {
-        //     // this means questions have already been fetched
-        //     setQuestions(JSON.parse(checkQuestion));
-        // } else {
-        //     // fetch data from the api
-        //     const res = await fetch(
-        //         `https://opentdb.com/api.php?amount=${questionsCount}&type=multiple`
-        //     );
-        //     const data = await res.json();
-        //     const formattedQuestions = formatQuestion(data.results);
-        //     console.log(formattedQuestions);
-        //     // set the fetched questions
-        //     // localStorage.setItem("questions", JSON.stringify(data.results));
-        //     // setQuestions(data.results);
-        // }
 
         //fetching in every run
         const res = await fetch(
@@ -68,9 +50,12 @@ function Questions() {
     return (
         <div className="questions-wrapper">
             <div className="question-list">{quizQuestions}</div>
-            <Button text="Check Answers" path="/results"/>
+            <div className="score-container">
+                <h3 className="result">You have Scored 5/5 correct answers</h3>
+                <Button text="Play Again" path="/questions" />
+            </div>
         </div>
     );
 }
 
-export default Questions;
+export default Results

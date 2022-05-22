@@ -152,3 +152,9 @@
 .logo:hover{
   color: var(--btn-color);
 }
+
+.score-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
