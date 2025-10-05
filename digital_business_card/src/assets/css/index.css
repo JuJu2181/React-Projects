@@ -47,7 +47,7 @@
 }
 
 .card-img{
-  background-image: url('../images/image102.jpg');
+  background-image: url('../images/pfp.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -229,7 +229,7 @@
   }
 }
 
-@media only screen and (max-height: 800px){
+@media only screen and (max-height: 920px){
 
 
   .name{
@@ -260,7 +260,7 @@
   }
   
   .content-desc{
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 200;
     color: var(--secondary_text_color);
   }
@@ -286,10 +286,24 @@
   }
 }
 
-@media only screen and (max-height: 550px){
+@media only screen and (max-height: 700px){
+  .content-desc{
+    font-size: 10px;
+  }
+
+  .skill{
+    display:  none;
+  }
+}
+
+@media only screen and (max-height: 500px){
   
   .skill{
     display:  none;
+  }
+
+  .about{
+    display: none;
   }
 }
 
